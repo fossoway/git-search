@@ -418,3 +418,37 @@ iframe {
   font-weight: 700;
   font-size: 20px;
 }
+
+.result__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.result__avatar {
+  height: 90px;
+  width: auto;
+}
+
+.result__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.result__watchers:after {
+  margin-left: 5px;
+  vertical-align: baseline;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/star.svg");
+}

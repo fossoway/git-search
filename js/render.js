@@ -3,6 +3,7 @@ const createItem = (data) => {
   div.classList.add('result__item');
 
   const divDesc = document.createElement('div');
+  divDesc.classList.add('result__description');
 
   const title = document.createElement('h3');
   const link = document.createElement('a');
@@ -16,10 +17,12 @@ const createItem = (data) => {
   description.innerText = data.description;
 
   const watchers = document.createElement('p');
+  watchers.classList.add('result__watchers')
   watchers.innerText = data.watchers;
 
   const img = document.createElement('img');
   img.src = data.owner.avatar_url;
+  img.classList.add('result__avatar');
 
   divDesc.append(title, description, watchers)
   div.append(img, divDesc);
@@ -29,6 +32,12 @@ const createItem = (data) => {
 
 
 export const renderResult = (elem, data) => {
-  const allResults = data.map(createItem);
-  elem.append(...allResults);
+  if (data.length === 0) {
+    const alert = document.createElement('h2');
+    alert.innerText = 'По вашему запросу результатов нет';
+    elem.append(alert);
+  } else {
+    const allResults = data.map(createItem);
+    elem.append(...allResults);
+  }
 }
