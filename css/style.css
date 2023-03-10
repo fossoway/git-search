@@ -378,7 +378,7 @@ iframe {
 
 .container {
   max-width: 1600px;
-  padding: 50px 100px;
+  padding: 25px 100px;
   margin: 0 auto;
 }
 
@@ -390,4 +390,31 @@ iframe {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 50px;
+}
+
+.title {
+  text-align: center;
+  color: #444444;
+}
+
+.form {
+  text-align: center;
+}
+.form .form__input {
+  width: 350px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+}
+.form .form__button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #ffcc00;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
 }

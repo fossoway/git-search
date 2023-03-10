@@ -12,6 +12,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<header>
+  <div class="container">
+    <h1 class="title">Поиск репозиториев в GitHub</h1>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <label class="form__label">
+        <input class="form__input" type="search" id="request" name="request" placeholder="Поиск..." required>
+      </label>
+      <button type="submit" class="form__button">искать</button>
+    </form>
+  </div>
+  <div class="container">
+    <section class="result">
+      <h2 class="result__title">Вот, что удалось найти по запросу:</h2>
+      <div class="result__wrapper">
+        <a class="result__link"></a>
+      </div>
+    </section>
+  </div>
+</main>
 </body>
 </html>
