@@ -2,6 +2,8 @@ const createItem = (data) => {
   const div = document.createElement('div');
   div.classList.add('result__item');
 
+  const divDesc = document.createElement('div');
+
   const title = document.createElement('h3');
   const link = document.createElement('a');
   link.href = data.html_url;
@@ -13,7 +15,14 @@ const createItem = (data) => {
   const description = document.createElement('p');
   description.innerText = data.description;
 
-  div.append(title, description);
+  const watchers = document.createElement('p');
+  watchers.innerText = data.watchers;
+
+  const img = document.createElement('img');
+  img.src = data.owner.avatar_url;
+
+  divDesc.append(title, description, watchers)
+  div.append(img, divDesc);
 
   return div;
 };

@@ -12,5 +12,6 @@ export const searchRequest = (form, elem) => {
     form.reset();
     renderResult(elem, data.items.splice(0, 10));
   })
-
 }
+
+
