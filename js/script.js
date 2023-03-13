@@ -5,7 +5,8 @@ const init = (selectorApp) => {
   const app = document.querySelector(selectorApp);
   const form = document.querySelector('.form');
   const input = document.querySelector('.form__input');
-  searchRequest(form, app);
+  const preloader = document.querySelector('.preloader');
+  searchRequest(form, app, preloader);
   resetResults(input, app);
 }
 

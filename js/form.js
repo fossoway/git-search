@@ -1,10 +1,9 @@
 import { renderResult } from "./render.js";
 
 
-export const searchRequest = (form, elem) => {
+export const searchRequest = (form, elem, preloader) => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const preloader = document.querySelector('.preloader');
     preloader.classList.remove('hidden');
     const formData = new FormData(e.target);
     const searchRequest = Object.fromEntries(formData);
