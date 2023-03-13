@@ -27,7 +27,7 @@
   <div class="container">
     <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
       <label class="form__label">
-        <input class="form__input" type="search" id="request" name="request" placeholder="Найти реопзиторий" minlength="2" required>
+        <input class="form__input" type="search" id="request" name="request" placeholder="Найти репозиторий" minlength="2" required>
       </label>
       <button type="submit" class="form__button">искать</button>
     </form>
@@ -35,6 +35,9 @@
   <div class="container">
     <section class="result">
       <div class="result__wrapper">
+      </div>
+      <div class="preloader hidden">
+        <span class="loader"></span>
       </div>
     </section>
   </div>

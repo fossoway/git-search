@@ -7,6 +7,7 @@ const createItem = (data) => {
 
   const title = document.createElement('h3');
   const link = document.createElement('a');
+  link.classList.add('result__link');
   link.href = data.html_url;
   link.target = '_blank';
   link.innerText = data.full_name;
