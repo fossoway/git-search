@@ -18,7 +18,7 @@ export const searchRequest = (form, elem) => {
 
 
 export const resetResults = (input, app) => {
-  input.addEventListener('focus', e => {
+  input.addEventListener('change', e => {
     app.innerText = '';
   })
 }
